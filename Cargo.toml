@@ -1,0 +1,26 @@
+[package]
+name = "rustc93804"
+version = "0.1.0"
+authors = ["marieell <marieell@tuta.io>"]
+edition = "2021"
+license = "AGPL-3.0+"
+description = "repo for #93804"
+
+[profile.dev]
+# otherwise compilation OOMs at 12GB
+debug = 0
+incremental = false
+lto = true
+opt-level = 1
+
+[dependencies]
+async-trait = "0.1.50"
+regex = "1.5.3"
+lazy-regex = "2"
+scraper = "0.12"
+serde_json = "1.0.64"
+paste = "1.0.5"
+futures-util = "0.3"
+thiserror = "1.0.24"
+shared_stream = "0.2"
+url = "2.2.2"
